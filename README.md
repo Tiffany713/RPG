@@ -11,10 +11,10 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 |   Behavior    |   Input     |     Output    |
 |--------------:|:-----------:|--------------:|
 |Dice roll results in a number between 2 -12| 4 and 4 | 8 |
-|User can create a character at the start of game| Bob, Human, Knight, Lawful Evil| Human character named bob who is a knight and is lawful evil with HP 100|
-|When two player are in battle, each turn in the battle is won by the player who rolls the highest number| Player 1 rolls a total of 7 and Player 2 rolls a total of 3| Player 1 wins turn |
-|When damage is dealt by a player, then the other player will recieve damage to their HP| Damage roll: 6| It will deal 12 damage pts to other player | 
 |When one player's HP hits 0, the other player is declared the winner| Player 1 HP: 0 | Player 1 loses, Player 2 wins|
+|When two player are in battle, each turn in the battle is won by the player who rolls the highest number| Player 1 rolls a total of 7 and Player 2 rolls a total of 3| Player 1 wins turn |
+|User can create a character at the start of game| Bob, Human, Knight, Lawful Evil| Human character named bob who is a knight and is lawful evil with HP 100|
+|When damage is dealt by a player, then the other player will recieve damage to their HP| Damage roll: 6| It will deal 12 damage pts to other player | 
 |When human player loses, game ends. |Player 1 HP:0 |Game Over (restart or quit)|
 |When a player wins, they will move on to the next level and gain 20 more HP pts. At level one, the player's HP starts at 100 HP| Player 1 wins battle with 70 HP left| Player 1 HP: 90 |
 |When player enters an empty space, player gains 10 hp |Player with HP 175 enters empty space |Player HP: 185 |

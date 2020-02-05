@@ -1,15 +1,27 @@
-export function DiceRoller(diceRoll1, diceRoll2) {
-    this.diceRoll1 = diceRoll1;
-    this.diceRoll2 = diceRoll2;
+export function DiceRoller(humDiceRoll1, humDiceRoll2, enemDiceRoll1, enemDiceRoll2, humTurnScore, enemTurnScore) {
+	this.humDiceRoll1 = Math.floor(Math.random() * 6) + 1;
+	this.humDiceRoll2 = Math.floor(Math.random() * 6) + 1;
+    this.enemDiceRoll1 = Math.floor(Math.random() * 6) + 1;
+	this.enemDiceRoll2 = Math.floor(Math.random() * 6) + 1;
+	this.humTurnScore = this.humDiceRoll1 + this.humDiceRoll2;
+    this.enemTurnScore = this.enemDiceRoll1 + this.enemDiceRoll2;
 }
 
 DiceRoller.prototype.rollDice = function () {
-	this.diceRoll1 = Math.floor(Math.random() * 6) + 1;
-	this.diceRoll2 = Math.floor(Math.random() * 6) + 1;
-	var diceTotal = this.diceRoll1 + this.diceRoll2;
-	if (diceTotal>1 && diceTotal<13) {
+	if ((this.humTurnScore>1 && this.humTurnScore<13) || (this.enemTurnScore>1 && this.enemTurnScore<13)) {
 		return true;
 	} else {
 		return false; 
 	}  
+}
+
+DiceRoller.prototype.turnLost = function () {
+    console.log(this.humTurnScore, this.enemTurnScore);
+    if (this.humTurnScore < this.enemTurnScore) {
+        return "You lost this turn!"
+    } else if (this.humTurnScore > this.enemTurnScore) {
+        return "You won this turn!"
+    } else {
+        return "it's a tie, roll again!"
+    }
 }

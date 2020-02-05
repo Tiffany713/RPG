@@ -3,7 +3,7 @@ export function Character(hp) {
     // this.species = species;
     // this.job = job;
     // this.alignment = alignment;
-    this.hp = hp;
+		this.hp = hp;
 }
 
 Character.prototype.battleLost = function () {

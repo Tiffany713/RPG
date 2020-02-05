@@ -4,8 +4,12 @@ import { exportAllDeclaration } from '@babel/types';
 
 describe('DiceRoller', () => {
 	test ("Dice roll results in a number between 2 -12", () => { 
-		var charRoll = new DiceRoller(4,4); //actual roll result is random. 4 and 4 are placeholders.
+		var charRoll = new DiceRoller(4,4,6,6,8,12); //actual roll result is random. 4 and 4 are placeholders.
 		expect(charRoll.rollDice()).toEqual(true);
+	});
+	test("The player with the highest turn score wins the turn", () => {
+		var loser = new DiceRoller(4,4,6,6,8,12);
+		expect(loser.turnLost()).toEqual("check consolelog for scores")
 	});
 });
 
