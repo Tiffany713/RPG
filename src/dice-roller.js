@@ -1,4 +1,7 @@
-export function DiceRoller(humDiceRoll1, humDiceRoll2, enemDiceRoll1, enemDiceRoll2, humTurnScore, enemTurnScore) {
+import { Character } from './../src/character.js';
+import { Enemy } from './../src/enemy.js';
+
+export function DiceRoller() {
 	this.humDiceRoll1 = Math.floor(Math.random() * 6) + 1;
 	this.humDiceRoll2 = Math.floor(Math.random() * 6) + 1;
     this.enemDiceRoll1 = Math.floor(Math.random() * 6) + 1;
@@ -16,12 +19,24 @@ DiceRoller.prototype.rollDice = function () {
 }
 
 DiceRoller.prototype.turnLost = function () {
+    
     console.log(this.humTurnScore, this.enemTurnScore);
     if (this.humTurnScore < this.enemTurnScore) {
-        return "You lost this turn!"
+        return "Enemy wins!"
     } else if (this.humTurnScore > this.enemTurnScore) {
-        return "You won this turn!"
+        return "Human Wins!"
     } else {
         return "it's a tie, roll again!"
     }
 }
+
+// DiceRoller.prototype.turnLost = function () {
+//     console.log(this.humTurnScore, this.enemTurnScore);
+//     if (this.humTurnScore < this.enemTurnScore) {
+//         return "You lost this turn!"
+//     } else if (this.humTurnScore > this.enemTurnScore) {
+//         return "You won this turn!"
+//     } else {
+//         return "it's a tie, roll again!"
+//     }
+// }

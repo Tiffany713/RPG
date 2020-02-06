@@ -1,7 +1,17 @@
-export function Enemy(name, species, job, alignment, hp) {
-    this.name = name;
-    this.species = species;
-    this.job = job;
-    this.alignment = alignment;
-    this.hp = hp;
+export function Enemy() {
+    this.hp = 100;
+}
+
+Enemy.prototype.battleLost = function () {
+	if (this.hp <= 0) {
+		return true
+	} else {
+		return false
+	}
+}
+
+Enemy.prototype.minScore = function () {
+    this.hp -= 10;
+    console.log(this.hp);
+    return this.hp;
 }

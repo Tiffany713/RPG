@@ -1,6 +1,6 @@
-import { Character } from "./character";
+import { Character } from "./character.js";
 import { rollDice } from "./character.js";
-import { Enemy } from "./enemy";
+import { Enemy } from "./enemy.js";
 
 export function Battle(result) {
 	this.result = result;
