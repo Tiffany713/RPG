@@ -1,12 +1,12 @@
 //constructor for space object
-export function Space() {
-
+export function Space(value) {
+    this.value = Math.floor(Math.random() * 3);
 }
 
-Space.prototype.addCoord = function(coord) {
-  this.coord = (coord);
-}
-
-Space.prototype.addValue = function(value) {
-  this.value = value;
+Space.prototype.assVal = function () {
+    if ((this.value >= 0) && (this.value <= 2)) {
+        return true;
+    } else {
+        return false;
+    }    
 }

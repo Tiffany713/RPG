@@ -2,6 +2,7 @@ import { DiceRoller } from './../src/dice-roller.js';
 import { Character} from './../src/character.js';
 import { exportAllDeclaration } from '@babel/types';
 import { Enemy } from '../src/enemy.js';
+import { Space } from '../src/space.js';
 
 describe('DiceRoller', () => {
 	test ("Dice roll results in a number between 2 -12", () => { 
@@ -27,4 +28,11 @@ describe('Character', () => {
 		character.hp = 0;
 		expect(character.battleLost()).toEqual("GAME OVER");
 	});
+});
+
+describe('Space', () => {
+	test('space has a value of 0, 1 or 2', () => {
+		var space = new Space();
+		expect(space.assVal()).toEqual(true);
+	}); 
 });
