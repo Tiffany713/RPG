@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
 <body>
@@ -11,8 +11,7 @@
 
 		<div id="start-page">
 			<div class="jumbotron">
-					<h2>KOGO</h2>
-				</div>
+				<h2>KOGO</h2>
 				<div class="panel">
 					<button type="submit" class="btn btn-success" id="startGame">Start Game</button>
 				</div>
@@ -20,50 +19,33 @@
 		</div>
 
 		<div id="create-character-page">
-			<form id="create-char-form">
-				<div class="form-group">
-					<label for="name">Enter Your Character's Name Here:</label>
-					<input id="name" class="form-control" type="text">
-				</div>
-				<div class="form-group">
-					<label for="avatar">Choose Your Avatar:</label>
-					<div class="radio">
-						<label>
-							<input type="radio" name="avatar" value="human" checked>
-							Chocolate
-						</label>
-						</div>
-					<div class="radio">
-						<label>
-							<input type="radio" name="avatar" value="chocolate" checked>
-							Chocolate
-						</label>
+			<div class="jumbotron">
+				<h2>Choose Your Fighter!!</h2>
+			</div>	
+				<form id="create-char-form">
+					<div class="form-group">
+						<label for="name">Enter Your Character's Name Here:</label>
+						<input id="name" class="form-control" type="text">
+
+						<label for="avatar">Choose Your Avatar:</label><br>
+							<input type="radio" class="avatar" name="sprite" value="sprite1" checked>
+							<img src="assets/images/wizard.jpeg" alt="sprite1"><br>
+							<input type="radio" class="avatar" name="sprite" value="sprite2">
+							<img src="assets/images/witch.jpg" alt="sprite2"><br>
+							<input type="radio" class="avatar" name="sprite" value="sprite3">
+							<img src="assets/images/cat.jpg" alt="sprite3"><br>
+							<input type="radio" class="avatar" name="sprite" value="sprite4">
+							<img src="assets/images/pig.jpg" alt="sprite4"><br>
+							<input type="radio" class="avatar" name="sprite" value="sprite5">
+							<img src="assets/images/bones.jpg" alt="sprite5">
 					</div>
-					<div class="radio">
-						<label>
-							<input type="radio" name="avatar" value="chocolate" checked>
-							Chocolate
-						</label>
-					</div>
-					<div class="radio">
-						<label>
-							<input type="radio" name="avatar" value="chocolate" checked>
-							Chocolate
-						</label>
-					</div>
-					<div class="radio">
-						<label>
-							<input type="radio" name="avatar" value="chocolate" checked>
-							Chocolate
-						</label>
-					</div>
-				</div>
-			</form>
-			
+				</form>
 		</div>
 
 		<div id="enter-cave-page">
-			<p>Worldbuilding info</p>
+			<p>You, a brave fighter, have stumbled upon a cave out in the dark woods. In your years as an adventurer, you have learned that caves are often full of treasure...but also full of danger!!! Are you the kind of fighter that is willing to take a risk for a little coin and a little fun? Heck NO!</p>
+			<button type="submit" class="btn btn-success" id="enterCave">Enter Cave</button>
+			<button></button>
 		</div>
 
 		<div id="enemy-page">
